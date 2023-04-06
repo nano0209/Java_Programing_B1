@@ -18,7 +18,7 @@ package day18_tasks;
 
 public class Palindrome {
     public static void main(String[] args) {
-        String word = "abcabr";
+        String word = "mom ";
         String reverse = "";
 
         for (int i = word.length() -1; i >=0 ; i--) {
