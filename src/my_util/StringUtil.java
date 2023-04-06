@@ -1,103 +1,84 @@
 package my_util;
 
 public class StringUtil {
-    public static String reverseStr (String str) {
+    public static String reverseStr(String str) {
 
 
         String reversed = "";
-        for (int i = str.length()-1; i >=0; i++) {
+        for (int i = str.length() - 1; i >= 0; i++) {
             reversed += str.charAt(i);
 
         }
         return reversed;
     }
 
-    /** This method made by Loopcamp Batch#1
+    /**
+     * This method made by Loopcamp Batch#1
      * This method accepts a String parameter and puts it in a format
      * Ex:
-     *      The format will be like this
-     *
-     *      First letter is in upper    case and rest is in lower case
-     *
-     *      Then return a String in a formatted way
+     * The format will be like this
+     * <p>
+     * First letter is in upper    case and rest is in lower case
+     * <p>
+     * Then return a String in a formatted way
      */
 
-    public static String dayOfWeek(int num) {  // 2
+    public static String fixFormat (String str) { // __feyruz__  -- F
+        String fixed = str.trim();
+        fixed = str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
+        return fixed;
+    }
 
-        if (num > 7 || num < 1) {
-            return "Number is not in the range.";
+
+    /**
+     This method will accept a String with multiple words
+     And convert it to cameCase String
+     Input:
+     JAVA will ruLE tHe wORLd
+     Output:
+     java Will Rule The World
+     */
+    public static String camelCase (String str) {   //"JAVA will ruLE tHe wORLd"
+        // JavaWillRuleTheWorld
+        String[] arr = str.split(" ");
+        String result = "";
+        for (String each : arr) {
+            result += (each.charAt(0) + "").toUpperCase() + each.substring(1).toLowerCase();
+        }
+        // JavaWillRuleTheWorld
+        return (result.charAt(0) + "").toLowerCase() + result.substring(1);
+
+    }
+
+    /**
+     * Thi method accepts String an a char
+     *And returns how many times that char exist in the String
+     * Input:
+     *     apple, z
+     *
+     * Output:
+     *     0
+     */
+
+
+        public static int frequencyOfCharacter(String str, char ch){
+            int count = 0;
+
+            for (int i = 0; i < str.length() ; i++) {
+                if (str.charAt(i) == ch){
+                    count ++;
+
+                }
+
+            }
+            return count;
+
+
         }
 
-        String[] words = {"Mon", "Tue", "Wed", "Thur", "Fri", "Sat", "Sun"};
-        //                   0      1      2      3       4      5      6
-        return words[num - 1];  // I am converting a number to index by minusing 1
     }
 
 
-    public static String dayOfWeek2(int num) {
 
-        String day = "";
-
-        switch (num) {
-            case 1:
-                day = "Mon";
-                break;
-            case 2:
-                day = "Tue";
-                break;
-            case 3:
-                day = "Wed";
-                break;
-            case 4:
-                day = "Thu";
-                break;
-            case 5:
-                day = "Fri";
-                break;
-            case 6:
-                day = "Sat";
-                break;
-            case 7:
-                day = "Sun";
-                break;
-            default:
-                day = "Num is not in the range";
-        }
-
-        return day;
-    }
-
-
-    public static String dayOfWeek3 (int num) {
-
-        switch (num) {
-            case 1:
-                return "Mon";
-            case 2:
-                return "Tue";
-            case 3:
-                return "Wed";
-            case 4:
-                return "Thu";
-            case 5:
-                return "Fri";
-            case 6:
-                return "Sat";
-            case 7:
-                return "Sun";
-            default:
-                return "Num is not in the range";
-        }
-
-
-    }
-
-    public static void main(String[] args) {
-        System.out.println(dayOfWeek(8));
-        System.out.println(dayOfWeek2(3));
-        System.out.println(dayOfWeek3(6));
-    }
-
-}
 
 
