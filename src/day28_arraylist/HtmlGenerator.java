@@ -33,8 +33,6 @@ public class HtmlGenerator {
             html += "<" + parts[0] + "></" + parts[0] + ">";
         }
 
-
-
         return html;
     }
 
