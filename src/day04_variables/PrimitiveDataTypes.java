@@ -1,4 +1,4 @@
-package day_04variables;
+package day04_variables;
 
 public class PrimitiveDataTypes {
     public static void main(String[]args){
