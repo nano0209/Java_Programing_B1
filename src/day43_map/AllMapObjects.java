@@ -4,7 +4,7 @@ import java.util.*;
 
 public class AllMapObjects {
     public static void main(String[] args) {
-        Map<String, String> map = new HashMap<>(); // order no guaranteed | null as key is ok
+        Map<String, String> map = new HashMap<>(); // order no guaranteed | null as key is ok and value also
         map.put("Java", "James");
         map.put("Tom", "Cartoon");
         map.put("Bon", "Movie");
@@ -13,7 +13,7 @@ public class AllMapObjects {
         System.out.println(map);
 
         System.out.println("===================================");
-        Map<String, String> linked = new LinkedHashMap<>(); // Maintains the Insertion order | accepts null
+        Map<String, String> linked = new LinkedHashMap<>(); // Maintains the Insertion order | accepts null and value also
         linked.put("Java", "James");
         linked.put("Tom", "Cartoon");
         linked.put("Bon", "Movie");
@@ -39,7 +39,7 @@ public class AllMapObjects {
         tableMap.put("Bond", "Movie");
         tableMap.put("Nadir", "Automation");
         // treeMap.put(null, "test");
-        // tableMap.put("check", null);
+        //tableMap.put("check", null);
         System.out.println(tableMap);
 
 
